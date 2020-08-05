@@ -1,0 +1,4 @@
+com/kubernetes/demo/Application.class
+com/kubernetes/demo/HelloResource.class
+com/kubernetes/demo/K8SDemoApplication.class
+com/kubernetes/demo/Application$ApplicationBuilder.class
