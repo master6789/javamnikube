@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: 42e35e61f3/demo:cicd-k8s-demo
+        image: 42e35e61f3demo
         ports:
         - containerPort: 8081
 ---
