@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: interviewdot/cicd-k8s-demo:latest
+        image: 42e35e61f3/demo:cicd-k8s-demo
         ports:
         - containerPort: 8081
 ---
