@@ -93,7 +93,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<repository>42e35e61f3/demo</repository>
+					<repository>42e35e61f3demo</repository>
 					<tag>${project.version}</tag>
 					<buildArgs>
 						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
