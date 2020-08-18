@@ -9,21 +9,21 @@ pipeline {
     stage('Compile') {
       steps {
         git 'https://github.com/master6789/javamnikube.git'
-        script{
+        script {
                 def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
                 sh "${mvnHome}/bin/mvn package"
         }
       }
     }
     stage('Building Docker Image') {
-      steps{
+      steps {
         script {
           dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
       }
     }
     stage('Push Image To Docker Hub') {
-      steps{
+      steps {
         script {
           /* Finally, we'll push the image with two tags:
                    * First, the incremental build number from Jenkins
@@ -36,8 +36,8 @@ pipeline {
         }
       }
     }
-    stage('Deploy to Kubernetes'){
-        steps{
+    stage('Deploy to Kubernetes') {
+        steps {
             sh 'kubectl apply -f deployment.yml'
        }
     }
