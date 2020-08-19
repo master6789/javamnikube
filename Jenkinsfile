@@ -37,7 +37,7 @@ pipeline {
       }
     }
     stage('Apply Kubernetes files') {
-       withKubeConfig([credentialsId: 'user1', serverUrl: 'https://api.k8s.my-company.com']) {
+       withKubeConfig([credentialsId: 'master6789/demo', serverUrl: 'https://api.k8s.my-company.com']) {
           sh 'kubectl create -f deployment.yml'
        }
     }
