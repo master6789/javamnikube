@@ -39,7 +39,7 @@ pipeline {
     stage('Apply Kubernetes files') {
       steps {
         script {
-            withKubeConfig([credentialsId: 'master6789/Monish@1990', serverUrl: 'https://api.k8s.my-company.com']) {
+            withKubeConfig([credentialsId: 'dc8af005-5efa-45b7-b9ec-caab715764bd']) {
                 sh 'kubectl create -f deployment.yml'
             }
         }
