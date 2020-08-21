@@ -39,7 +39,7 @@ pipeline {
     stage('Apply Kubernetes files') {
       steps {
         script {
-           withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: 'minikube', contextName: 'minikube', credentialsId: '76dea39c-a952-4260-8a81-017636b5e601', namespace: 'myns', serverUrl: 'https://192.168.99.127:8443']]) {
+           withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: 'minikube', contextName: 'minikube', credentialsId: '0ca30707-3370-4ad4-b505-7eb59dff427f', namespace: 'myns', serverUrl: 'https://192.168.99.128:8443']])  {
                 sh 'kubectl create -f deployment.yml'
             }
         }
