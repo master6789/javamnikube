@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-deployment
+  name: demo-deployment2
   labels:
     app: demo-app
 spec:
@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo-service
+  name: demo-service2
 spec:
   selector:
     app: demo-app
@@ -36,7 +36,7 @@ spec:
 apiVersion: policy/v1beta1
 kind: PodDisruptionBudget
 metadata:
-  name: demo-pdb
+  name: demo-pdb2
 spec:
   minAvailable: 2
   selector:
